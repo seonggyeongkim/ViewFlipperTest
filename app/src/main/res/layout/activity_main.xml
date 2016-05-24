@@ -3,22 +3,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="kr.hs.emirim.duckbill0316.viewflippertest.MainActivity"
     android:orientation="vertical">
+    <!--<LinearLayout
+            android:background="#cf3effe8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </LinearLayout> 패딩 값을 넣고 싶을 때!-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center_horizontal"
         >
+
         <Button
+            android:id="@+id/but_prev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/but_text_prev"
+            android:layout_marginRight="20dp"
             />
-    </LinearLayout>
 
+        <Button
+            android:id="@+id/but_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/but_text_next"
+            /> <!--wrap_content : 자신의 사이즈의 맞게 설정!-->
+
+    </LinearLayout>
+    <ViewFlipper
+        android:id="@+id/view_flip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="#cf3effe8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </LinearLayout><!--drawable/ : 이미지 삽입가능!-->
+
+        <LinearLayout
+            android:background="#cfef8dd7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#cffcff3e"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </LinearLayout>
+
+    </ViewFlipper>
 </LinearLayout>
